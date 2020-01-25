@@ -1,0 +1,47 @@
+<style>
+    table,th,td
+    {
+      border:1px solid black;
+    }
+    table{
+      width: 50%;
+    }
+    
+    div
+    {
+      text-align: center;
+    }
+    
+    </style>
+    
+    
+    <div *ngIf="show.length>0">
+    <div *ngFor="let j of show" >
+      <table align="center">
+        <tr>
+    <th>Items</th>
+    <th>Price</th>
+      </tr>
+      <tr>
+      <td>{{j.item1}}</td>
+    <td>{{j.price1}}</td>
+    </tr>
+    <tr>
+      
+      <td>{{j.item2}}</td> <td>{{j.price2}}</td>
+      </tr>
+      <tr><td><strong>Total:-</strong></td><td>{{j.total}}</td></tr>
+      <tr colspan="2"><button (click)="checkout()">Checkout</button></tr>
+      </table>
+    </div>
+    </div>
+    
+      <hr>
+      <hr>
+      <div *ngIf="a">
+    <strong> Total Amount:</strong>{{total1}}<br>
+    <strong>Tax:</strong>{{tax}}<br>
+    <strong>AmountPayable:</strong>{{amountpay}}<br>
+    </div>
+    
+    

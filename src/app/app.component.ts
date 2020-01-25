@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'inventory';
+  title = 'Template';
+  details=[];
+  
+  total:number;
+  
+savedetails(i:any)
+{
+  this.total=i.total;
+  this.details.push(i);
+  
+}
+
+
+
 }
